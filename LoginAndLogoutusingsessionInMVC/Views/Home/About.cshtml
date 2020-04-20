@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "About";
+    if (Session["id"] == null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<h3>UserName-</h3>@Session["Email"]
+<p>Use this area to provide additional information.</p>
+
+<a href="@Url.Action("Logout","Home")"><button>Logout</button></a>
